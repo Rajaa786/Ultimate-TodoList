@@ -1,0 +1,181 @@
+.container {
+  padding: 0;
+  height:max-content;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.pane {
+  padding: 10px;
+  width: 30vw;
+  height: 80vh;
+  border: 3px solid rgb(50, 36, 71);
+  /* border: 3px solid rgb(233, 233, 231); */
+  border-radius: 5px;
+  cursor: context-menu;
+}
+.notes_container::-webkit-scrollbar {
+  display: none;
+}
+
+.notes_container {
+  margin-top: 21px;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  justify-content: space-around;
+  gap: 24px;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.pane_name {
+  border: 3px solid rgb(50, 36, 71);
+  /* border: 3px solid rgb(121, 97, 2); */
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 1);
+  padding: 5px;
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
+}
+
+.addnotes {
+  height: 150px;
+  box-sizing: border-box;
+  font-size: 45px;
+  font-weight: lighter;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.addnotes:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.invisible {
+  visibility: collapse;
+}
+
+.trans {
+  transition: visibility 0.2s ease-out;
+}
+
+.inline {
+  display: inline;
+  position: absolute;
+  background: rgb(75, 61, 3);
+  color: beige;
+  padding: 5px;
+  border-radius: 5px;
+  pointer-events: auto;
+  box-shadow: 0 5px 7px rgba(97, 76, 4, 0.2);
+  height: fit-content;
+  width: fit-content;
+  font-size: 18px;
+}
+
+.notes {
+  height: 80%;
+  width: 95%;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  resize: none;
+  cursor: context-menu;
+  outline: none;
+}
+
+.notes::-webkit-scrollbar,
+h4::-webkit-scrollbar {
+  display: none;
+}
+
+h4 {
+  margin: 0;
+  width: 95%;
+  height: 17%;
+  padding: 0 2px 0 2px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  text-align: left;
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  box-shadow: 0 0 7px rgba(128, 128, 128, 0.1);
+  overflow-x: scroll;
+}
+
+.stickyNote {
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  height: 150px;
+  box-shadow: 0 0 7px rgba(128, 128, 128, 1);
+}
+
+.notesMenu {
+  box-sizing: border-box;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(128, 128, 128, 0.4);
+  padding: 5px;
+}
+
+li {
+  list-style: none;
+  width: 8rem;
+}
+
+ul {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.sendMenu {
+  box-sizing: border-box;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background: white;
+  left: 135px;
+  top: -19px;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(128, 128, 128, 0.4);
+  padding: 5px;
+}
+
+.sendOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.disabled_button {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.point {
+  cursor: pointer;
+}
